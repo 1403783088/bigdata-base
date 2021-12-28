@@ -9,7 +9,7 @@
         - [git地址](#git地址)
         - [介绍](#介绍)
             - [工程结构](#工程结构)
-            - [模块依赖](#模块依赖)
+            - [数据流向](#数据流向)
             - [配置文件](#配置文件)
                 - [1. application.conf](#1-applicationconf)
                 - [2. app_config.properties](#2-app_configproperties)                
@@ -54,19 +54,15 @@
 > 1. 用户对集群资源的访问权限
 > 2. 在本地运行访问集群的代码时，所需的提前配置
 
-- [资源签审系统](http://10.2.21.41/)使用教程
+- 首先确保自己可以成功访问集群及需要的资源（库、目录等）。
 
-    http://10.2.21.8/#/question/detail?id=a94297a5-098e-4f8a-9037-2bbf636c843d
-
-- 集群账号以及资源权限
-
-    在[资源签审系统](http://10.2.21.41/)中申请大数据集群账号以及需要访问的集群资源。
+- 所有工具及版本：通过Maven配置，详见pom.xml文件。
 
 - hosts
 
-    账号申请成功后，在账号申请页面点击【下载配置文件】，将hosts下载下来替换自己本地的。
+    在自己本地hosts文件中添加集群所有机器的域名映射。
 
-- 下载以下文件并放到自己项目的resourse目录下
+- 获取以下文件并放到自己项目的resourse目录下
     ```shell
     hive-site.xml
     hdfs-site.xml
@@ -85,7 +81,7 @@
 
 ### git地址
 
-    http://10.2.7.13/260371/bigdata-base.git
+    https://github.com/1403783088/bigdata-base.git
 
 ### 介绍
     
@@ -112,7 +108,7 @@ spark
 └─ pom.xml                   # 项目的maven配置  
 ```
 
-#### 数据流向图
+#### 数据流向
 
 ![process_structure](./images/process_structure.png)
 
