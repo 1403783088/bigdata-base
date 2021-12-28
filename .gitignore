@@ -1,0 +1,5 @@
+#要忽略的文件
+/.idea/
+/bigdata-base.iml
+/logs.log
+/*/target/
